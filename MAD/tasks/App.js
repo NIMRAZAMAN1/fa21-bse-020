@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView } from 'react-native';
-import App from './tasks/todolist';
+import Chessboard from './labtask/task1';
 
-export default function App() {
+export default function Chessboard() {
   return (
    <SafeAreaView style={styles.container}>
    <View>
-    <App>
+    <Chessboard>
 
-    </App>
+    </Chessboard>
    </View>
    <Statusbar Style="auto"></Statusbar>
    </SafeAreaView>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList, TouchableOpacity } from 'react-native';
 
 // Define the main App component
-const App = () => {
+const App1 = () => {
   // State to manage the list of tasks
   const [tasks, setTasks] = useState([]);
   // State to manage the input text
@@ -60,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App1;
