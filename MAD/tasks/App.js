@@ -1,26 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native';
-import Chessboard from './labtask/task1';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import CalenderScreen from './calender';
+//import PrayerScreen from './prayer';
+import StreakScreen from './StreakScreen';
+import RecordScreen from './RecordScreen';
+import Prayers from './Prayers';
+const Stack = createStackNavigator();
 
-export default function Chessboard() {
+const App = () => {
   return (
-   <SafeAreaView style={styles.container}>
-   <View>
-    <Chessboard>
-
-    </Chessboard>
-   </View>
-   <Statusbar Style="auto"></Statusbar>
-   </SafeAreaView>
-    
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Calendar">
+        <Stack.Screen name="Calendar" component={CalenderScreen} />
+        <Stack.Screen name="Streak" component={StreakScreen} />
+        <Stack.Screen name="Record" component={RecordScreen} />
+        <Stack.Screen name="Prayers" component={Prayers}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
